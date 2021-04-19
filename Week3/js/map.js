@@ -1,6 +1,4 @@
-
-	var map = L.map('map').setView([37.0902,-95.7129], 4);
-	let data = [
+let data = [
 		{
 			'title':'Olympic Training Center Colorado Springs',
             'description': 'On of my favorite pools because it was a immeersive environment to training wiht olympians.',
@@ -22,7 +20,7 @@
 			'lat': 32.959903011367,
 			'lon': -117.20161741062,
             'url': "https://images.squarespace-cdn.com/content/v1/55809453e4b07ca0ea560fa6/1438022174349-L55ITH6QTV1MXK2ICDN5/ke17ZwdGBToddI8pDm48kFWxnDtCdRm2WA9rXcwtIYR7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UcTSrQkGwCGRqSxozz07hWZrYGYYH8sg4qn8Lpf9k1pYMHPsat2_S1jaQY3SwdyaXg/Cathedral-Catholic_1.jpg?format=750w"
-
+        },
 		{
 			'title':'Los Gatos',
 			'description': '',
@@ -122,45 +120,48 @@
             'url': "https://www.tonawanda.ny.us/images/igallery/resized/101-200/Tonawanda_Aquatic_Center_3-109-800-600-80.jpg"
 		}
 		]
+ 
 
-			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-				attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-			}).addTo(map);
+let map = L.map('map').setView([0,0], 3);
 
-            let myMarkers = L.featureGroup();
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-			data.forEach(function(item, index){
-                // create marker
-                let marker = L.marker([item.lat,item.lon], {icon: Icon}).bindPopup(`<h3>${item.title}</h3><p>${item.description}</p<br /> <br /> <img src ='${item.url}' width=80% />`)
-            
-                // add marker to featuregroup
-                myMarkers.addLayer(marker)
-            
-                // add data to sidebar with onclick event
-                $('.sidebar').append(`<div class="sidebar-item" onclick="flyToIndex(${index})">${item.title}</div>`)
-            })
+var Icon = L.icon({
+	iconUrl: 'https://pngimg.com/uploads/soap_bubbles/soap_bubbles_PNG37.png',
 
-            myMarkers.addTo(map)
+	iconSize: [20.70]
+})
+
+let myMarkers = L.featureGroup();
 
 
-            // define layers
-            let layers = {
-	        "My Markers": myMarkers
-            }
+data.forEach(function(item, index){
 
-            // add layer control box
-            L.control.layers(null,layers).addTo(map)
+	let marker = L.marker([item.lat,item.lon], {icon: Icon}).bindPopup(`<h3>${item.title}</h3><p>${item.description}</p<br /> <br /> <img src ='${item.url}' width=80% />`)
 
+	myMarkers.addLayer(marker)
 
-            // make the map zoom to the extent of markers
-            map.fitBounds(myMarkers.getBounds());
-
-            // function to fly to a location by a given id number
-            function flyToIndex(index){
-                map.flyTo([data[index].lat,data[index].lon],12)
-
-                // open the popup
-                myMarkers.getLayers()[index].openPopup()
-            }
+	$('.sidebar').append(`<div class="sidebar-item" onclick="flyToIndex(${index})">${item.title}</div>`)
+})
 
 
+myMarkers.addTo(map)
+
+let layers = {
+	"My Markers": myMarkers
+}
+
+L.control.layers(null,layers).addTo(map)
+
+
+map.fitBounds(myMarkers.getBounds());
+
+
+function flyToIndex(index){
+	map.flyTo([data[index].lat,data[index].lon],12)
+
+	myMarkers.getLayers()[index].openPopup()
+}
+     

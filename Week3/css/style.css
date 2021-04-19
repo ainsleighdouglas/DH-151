@@ -35,3 +35,11 @@ body {
 .content {
 	grid-area: content;
 }
+
+.sidebar-item {
+    padding: 10px; 
+    background: rgb(4, 63, 172); 
+    border: 2px solid rgb(226, 236, 255); 
+	border-radius: 6px;
+    margin: 8px; 
+}
