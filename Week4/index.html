@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gun Violence Incidents in Illinois</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="js/papaparse.min.js"></script>
+
+</head>
+<body>
+
+	<div class="header">
+		Gun Violence in Illinois
+	</div>
+	<div class="sidebar">
+		<h2>About</h2>
+        Gun Violence
+		
+        <h2>Interact Below</h2>
+		<p> 
+        Selec any of the following to track the points on the map.
+		</p> 
+
+		<p> </p>
+	</div>
+	<div class="content">
+		<div id="map"></div>
+	</div>
+	<div class="footer">
+		Source: <a href="https://data.world/mingchao00/gun-violence-data">US Nation Wide Gun Violence Report</a>
+	</div>
+
+	<script src="js/map.js"></script>
+
+</body>
+</html>
