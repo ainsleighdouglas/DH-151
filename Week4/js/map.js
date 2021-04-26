@@ -3,7 +3,7 @@ let map;
 let lat = 0;
 let lon = 0;
 let zl = 3;
-let path = "data/carbonEmissions.csv";
+let path = "data/carbonEmissionsDH.csv";
 let markers = L.featureGroup();
 
 // initialize
@@ -40,27 +40,28 @@ function mapCSV(data){
 	
 	// circle options
 	let circleOptions = {
-		radius: 10,
+		radius: 15,
 		weight: 1,
 		color: 'white',
-		fillColor: 'dodgerblue',
-		fillOpacity: 1,
+		fillColor: 'green',
+		fillOpacity: .5,
 	}
 
 	// loop through each entry
 	data.data.forEach(function(item,index){
-		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions) // create marker
+
+        circleOptions.radius = item.latest_value * 20
+
+		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
 		.on('mouseover',function(){
-			this.bindPopup("<h3>" + item.title + " (" + item.date + ")" + "</h3>" + "<center><img src ='" + item.reference_url + "'width=100%'/></center>" +
-			item.description).openPopup()
+			this.bindPopup(`<h3>${item.geoAreaName}</h3>${item.latest_value}`).openPopup()
 		})
-		// add marker to featuregroup		
+
+		// add marker to featuregroup
 		markers.addLayer(marker)
 
-		//fly to location and show/hide paragraph when clicked
-		$('.sidebar').append(`<div class="sidebar-item" onclick="ShowAndHide(${index});flyToIndex(${index});">${item.title} <br><i>(${item.date})</i></div>`)
-		//add paragraph div to sidebar
-		$('.sidebar').append(`<div id = "${index}" style="display: none">${item.description}<br><center><img src="${item.reference_url}"></center><br>${item.caption}</div>`)
+		// add entry to sidebar
+		$('.sidebar').append(`<img src="https://images.emojiterra.com/twitter/v13.0/512px/1f5fa.png"  onmouseover="panToImage(${index})"> ${item.geoAreaName}<br>`)
 	})
 
 	markers.addTo(map); // add featuregroup to map
@@ -68,12 +69,7 @@ function mapCSV(data){
 	map.fitBounds(markers.getBounds()); // fit markers to map
 }
 
-
-
-function flyToIndex(index){
-	// zoom to level 12 first
-	map.setZoom(12);
-	// pan to the marker
-	map.flyTo(markers.getLayers()[index]._latlng);
-	markers.getLayers()[index].openPopup();
+function panToImage(index){
+	map.setZoom(17);
+	map.panTo(markers.getLayers()[index]._latlng);
 }

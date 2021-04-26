@@ -24,7 +24,7 @@ body {
 	grid-area: header;
 	padding:20px;
 	background-color:#130909;
-	color: rgb(182, 119, 36);
+	color: rgb(143, 182, 36);
 	font-size: 2em;
 }
 
@@ -60,5 +60,5 @@ body {
 }
 
 img {  
-	max-width: 75%;    
+	max-width: 5%;    
 	}  
