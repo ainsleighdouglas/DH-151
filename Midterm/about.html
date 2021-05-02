@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>About</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="js/papaparse.min.js"></script>
+
+    <style>
+    /* Set additional styling options for the columns */
+    .column {
+    float: left;
+    }
+
+    /* Set width length for the left, right and middle columns */
+    .left {
+    text-align: left;
+    width: 31%;
+    padding: 0px 20px;
+    margin: 3px;
+    border-radius: 8px;
+    }
+
+    .middle {
+    text-align: left;
+    width: 31%;
+    padding: 0px 20px;
+    margin: 3px;
+    border-radius: 8px;
+    }
+    
+    .right {
+    text-align: left;
+    width: 31%;
+    padding: 0px 20px;
+    margin: 3px;
+    border-radius: 8px;
+    }
+
+    /*
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    */
+
+    </style>
+
+
+<!--
+    <style>
+		
+		a:visited {
+		  color: rgb(83, 182, 228);
+		  background-color: transparent;
+		  text-decoration: none;
+		}
+		a:hover {
+		  color: rgb(208, 228, 33);
+		  background-color: transparent;
+		  text-decoration: underline;
+		}
+		a:active {
+		  color: rgb(230, 102, 198);
+		  background-color: transparent;
+		  text-decoration: underline;
+		}
+
+
+
+		</style>
+
+-->
+
+
+</head>
+<body>
+
+	<div class="header">
+        <div class="tile_div">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+            <div class="row issue">
+            <div class="title col-md-7"></div>
+             <div class="buttons btn-group col-md-5">
+                    <button onclick="" > Research </button>
+                    <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Week4/index.html'" >Map</button>
+                    <button onclick="" >Visualizations</button>
+                    <button onclick="" >Conclusion</button>
+                    <button onclick="" >About</button>
+             </div>
+             </div>
+            <div class="clear"></div>
+        </div>
+	</div>
+
+    <!--
+	<div class="sidebar">
+
+        <br>
+		<br>
+
+		<button onclick=""> About </button>
+		<br>
+		<br>
+		<button onclick="document.location='https://www.iucnredlist.org'">Red List</button>
+
+
+
+
+		<h2>About</h2>
+        This dataset is the part of the Global SDG Indicator Database compiled through the UN System in preparation for the Secretary-General's annual report on Progress towards the Sustainable Development Goals. Provides insight to the relationship between countries and the carbon emissions.
+		
+        <h2>Interact Below</h2>
+		<p> 
+		</p> 
+
+		<p> </p>
+	</div>
+--> 
+
+	<div class="content">
+
+    </br>
+    </br>
+    </br>
+    <h1 style= "text-align:center">About</h1>
+
+    <p> 
+        * place holder text * In this project, we want to investigate the environmental impact of technology, particularly the internet and web-hosting services. Internet access and usage requires an enormous amount of energy, and there are now over 2000 data centers around the world. These data centers are a significant source of carbon emissions, and have a large impact on the total carbon footprint of the world. Our goal is to investigate where these data centers are and compare those locations to areas with high carbon emissions, with the goal of determining if internet usage is one of the leading causes of carbon dioxide pollution. This research will potentially push the world to develop new, more efficient ways to host internet access as the climate change crisis continues to worsen.
+
+    </p> 
+    <br/>
+    <br/>
+    <div class="row">
+        <div class="column left" style="background-color: rgb(227, 255, 211);">
+            <img src="pictures/seb.png"/>
+            <h1 style= "text-align:center">Sebastien</h1>
+            <h4 style="color: rgb(48, 100, 17);">Position -  Data Analytics and Historical Background</h4><br/><p>Will work in data analytics and help provide a historical background</p>
+        </div>
+        <div class="column middle" style="background-color: rgb(227, 255, 211);">
+            <img src="pictures/ryan.png"/>
+            <h1 style= "text-align:center" >Ryan</h1>
+            <h4 style="color: rgb(48, 100, 17);">Position - Content Creator</h4><br/><br/><p>Will primarily aid with narrative development and data analysis. </p>
+        </div>
+        <div class="column right" style="background-color: rgb(227, 255, 211);">
+            <img src="pictures/ansl.png"/>
+            <h1 style= "text-align:center">Ainsleigh</h1><br/>
+            <h4 style="color: rgb(48, 100, 17);">Position-Designer</h4><br/><p>Will focus on the design and visual aesthetic of the map and data visualization outputs. </p>
+        </div>
+    </div>
+
+
+	</div>
+
+
+
+	<div class="footer">
+		Source: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
+	</div>
+
+	<!--<script src="js/map.js"></script>-->
+
+
+</body>
+</html>
