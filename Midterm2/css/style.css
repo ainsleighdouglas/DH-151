@@ -1,0 +1,120 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+	font-size: 100%;
+}
+
+#map {
+	height: 100%;
+    width: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 80px 1fr 40px;
+	grid-template-columns: 20% 80%;
+	grid-template-areas: 
+	"header header"
+	"sidebar content"
+	"footer footer";
+}
+
+.header {
+	grid-area: header;
+	padding:25px;
+	background-color:#161f00;
+	color: white;
+	font-size: 1.3em;
+}
+
+
+.about {
+	grid-area: about;
+}
+
+
+.content {
+	grid-area: content;
+    width: 75%;
+}
+
+.footer {
+	grid-area: footer;
+	padding:10px;
+	background-color:#130909;
+	color: white;
+}
+  
+
+button {
+        background-color:#1f5706; 
+        opacity: .7;
+        /* text-align: right; */
+        border: none;
+        color: white;
+        padding: 0px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        position: relative;
+    
+    border: 1px solid rgb(60, 163, 0); 
+    margin: 0px;
+    cursor: pointer; 
+    border-radius: 8px;
+    text-align: center;
+    }
+    
+    button:hover {
+        background:rgb(60, 163, 0);
+        border: 1.5px solid rgb(60, 163, 0);
+        ;
+        opacity: 1;
+    }
+
+
+
+
+
+    .column {
+        float: left;
+        width: 33.33%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      } 
+
+
+    .tile_div a {
+        display: block;
+        float: left;
+        height: 50px;
+        width: 100px;
+        margin-right: 5px;
+        background-image: url(./images/button_left.png);
+        text-align: center;
+        line-height: 50px;
+        text-decoration: none;
+    }
+    
+    .title_div a.last {
+        margin-right: 0;
+    }
+    
+    .clear {
+        clear: both;
+    }
+
+
+
+    .right{
+        display:flex;
+        justify-content: flex-end;
+        }
