@@ -2,6 +2,8 @@ body,html {
 	margin:0;
 	height:100%;
 	width:100%;
+	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+	font-size: 100%;
 }
 
 #map {
@@ -21,8 +23,8 @@ body {
 .header {
 	grid-area: header;
 	padding:10px;
-	background-color: #333;
-	color: white;
+	background-color:rgb(227,212,203);
+	color: rgb(69,73,73);
 	font-size: 2em;
 }
 
