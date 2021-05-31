@@ -16,9 +16,63 @@
 
 	<script src="js/papaparse.min.js"></script>
 
+    <style type="text/css">
+
+
+        #main {
+        font-family:Arial, Helvetica, sans-serif;
+        color:rgb(255, 0, 0);
+        font-style:bold;
+        font-size:35px;
+        margin-top:320px;
+        
+        }
+        
+        #main2 {
+        font-family:Arial, Helvetica, sans-serif;
+        color:rgb(255, 0, 0);
+        font-size:80px;
+        
+        }
+        
+        </style>
 
 </head>
-<body>
+
+
+
+<div class="popup" onclick="myFunction()">Click me!
+    <span id="myPopup" data-new-gr-c-s-check-loaded="14.1012.0" data-gr-ext-installed="">
+    <center><div id="main">GOOGLE.COM EMITTED<strong> 87294.03</strong> KG OF CO2 SINCE YOU OPENED THIS PAGE</div><center>
+    <div id="main2"></div>
+    
+    <script>
+    var c = 0;
+    var visitsSec = 47193;
+    
+    //pes en kg. x 1 cÃ rrega google.com = 1,25MB
+    var co2 = 0.0108171;
+    
+    setInterval(function(){ 
+        document.getElementById("main").innerHTML = ""+ 'GOOGLE.COM EMITTED'+'<strong> '+ 			c.toFixed(2) +'</strong> '+'KG OF CO2 SINCE YOU OPENED THIS PAGE';
+        console.log(c);
+        c = c + visitsSec * co2;
+         
+    }, 1000);
+        
+    </script>
+
+</span>
+</div>
+
+<script>
+    // When the user clicks on <div>, open the popup
+    function myFunction() {
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
+    }
+ </script>
+
 
 	<div class="header">
         <!--<img src="https://lh3.googleusercontent.com/proxy/Yji5WbskShE-C3kqjZhUsVJmRpRo7QpcC-WR1vubHx-kxSQ73l_H40__G3UgzWK0twa_Pk9RmAzmeOFcwek7O0vK0sGhOAo" style= "height: 20px; width: 20px";="">-->
