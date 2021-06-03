@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Team Data</title>
+  <!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="js/papaparse.min.js"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+  <style type="text/css">
+
+
+    #main {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #aa4c00;
+    font-style:bold;
+    font-size:35px;
+    margin-top:10px;
+    
+    }
+    
+    #main2 {
+    font-family:Arial, Helvetica, sans-serif;
+    color: #aa4c00;
+    font-size:80px;
+    
+    }
+    
+    </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+  <h2>Modal Example</h2>
+
+<!-- Trigger/Open The Modal 
+<div class="button" onclick="myFunction()"></div><button id="myBtn"><div id="main"></div></button>-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+<!-- Clock Widget -->
+<script>
+// When the user clicks on <div>, open the popup
+function myFunction() {
+  var popup = document.getElementById("myPopup");
+  popup.classList.toggle("show");
+}
+</script>
+
+
+<!-- Navigation -->
+<header class="header">
+	<nav class="navbar navbar-expand navbar-light">
+    <a class="navbar-brand" href="index.html" ></a>
+     <div class="popup" onclick="myFunction()"></div><div id="main"></div>
+      <span id="myPopup" data-new-gr-c-s-check-loaded="14.1012.0" data-gr-ext-installed="">
+          <!--<center><div id="main">GOOGLE.COM EMITTED<strong> 87294.03 </strong> KG OF CO2 SINCE YOU OPENED THIS PAGE</div><center>-->
+          <div id="main2" ></div>
+          
+          <script>
+          var c = 0;
+          var visitsSec = 47193;
+          
+          //pes en kg. x 1 cÃ rrega google.com = 1,25MB
+          var co2 = 0.0108171;
+          
+          setInterval(function(){ 
+              document.getElementById("main").innerHTML = ""+ ''+'<strong> '+ c.toFixed(2) +'</strong> '+'';
+              console.log(c);
+              c = c + visitsSec * co2;
+               
+          }, 1000);
+              
+          </script>
+          
+          </span>
+        </div>
+    </a> 
+
+    <!--Responsive menu button-->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <button onclick="" > Research </button>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.location='https://ryanorlando.github.io/Dh151/Midterm/index.html'" >Map</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="" >Visualizations</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="" >Conclusion</button>
+        </li>
+      </ul>
+    </div>
+</nav>
+</header>
+
+<!--<div class="header">
+    <div class="tile_div">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+        <div class="row issue">
+        <div class="title col-md-7"></div>
+         <div class="buttons btn-group col-md-5">
+                <button onclick="" > Research </button>
+                <button onclick="document.location='https://ryanorlando.github.io/Dh151/Midterm/index.html'" >Map</button>
+                <button onclick="" >Visualizations</button>
+                <button onclick="" >Conclusion</button>
+                <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Midterm2/about.html'" >About</button>
+         </div>
+         </div>
+        <div class="clear"></div>
+    </div>
+</div>-->
+
+
+
+<!-- Content -->
+<div class="content">
+
+</br>
+</br>
+    <center> <img src="https://media.datacenterdynamics.com/media/images/ovhcloud_sdis_3.2e16d0ba.fill-1200x630.jpg" style ="width:75%;height: 75%"/></center>
+
+</br>
+</br>
+</br>
+<h1 style= "text-align:center; color:#3d3800; font-size: 50px">Introduction</h1>
+
+<p style = "font-size: 20px; padding: 250px; padding-top: 10px; text-align: center; color:#3d3800;"> 
+        This project will be about the weight of data and internet usage in the modern era, with an emphasis on the environmental impact of these practices. 
+        Our group (called Team Data) will be investigating this issue with the goal of determining its severity and investigating potential solutions. Due to 
+        the large scope of our research and the great number of confounding variables contributing to global warming, we recognize that this project will 
+        represent more of an educational resource than an attempt to prove a relationship. Data center emissions are not the main cause of carbon emissions, 
+        but they are an unexpected source, and through our research, we hope to shed more light on this issue. In this spirit, we will aim to highlight current 
+        research on this topic, provide visual and textual information, and bring the user's attention to new ways of thinking about the impact of their online 
+        activity. 
+</p> 
+
+</div>
+<div class="footer">
+Source: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
+</div>
+
+<script src="js/map.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visualizations</title>
+	<meta charset="utf-8" />
+
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+	<script src="js/papaparse.min.js"></script>
+    
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    
+    <style>
+ /*    
+    .column {
+    float: left;
+    }
+
+     
+    .left {
+    text-align: center;
+    width: 31%;
+    padding: 0px 20px;
+    margin: 3px;
+    border-radius: 8px;
+    }
+
+    .middle {
+    text-align: center;
+    width: 31%;
+    padding: 0px 20px;
+    margin: 3px;
+    border-radius: 8px;
+    }
+    
+    .right {
+    text-align: center;
+    width: 31%;
+    padding: 0px 20px;
+    margin: 3px;
+    border-radius: 8px;
+    }
+*/
+
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+
+	<div class="header">
+        <div class="tile_div">
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+            <div class="row issue">
+            <div class="title col-md-7"></div>
+             <div class="buttons btn-group col-md-5">
+                    <button onclick="" > Research </button>
+                    <button onclick="document.location='https://ryanorlando.github.io/Dh151/Midterm/index.html'" >Map</button>
+                    <button onclick="" >Visualizations</button>
+                    <button onclick="" >Conclusion</button>
+                    <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Midterm2/index.html'" >Home</button>
+             </div>
+             </div>
+            <div class="clear"></div>
+        </div>
+	</div>
+
+
+</br>
+</br>
+    <html>
+    <div class="content">
+    </br>
+    </br>
+        <p> 
+            <h3 style= "text-align:center; color:#1f5706; font-size: 40px">Analysis of Data Centers and Carbon Emissions:</h3>
+        </p>
+    </br>
+
+    <div class='tableauPlaceholder' id='viz1622415936290' style='position: relative'>
+        <noscript><a href='#'><img alt='Carbon Emissions as predicted by # of Data Centers' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CarbonEmissionaspredicatedbyofDataCenters&#47;Sheet12&#47;1_rss.png' style='border: none' /></a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'>
+        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+        <param name='embed_code_version' value='3' /> 
+        <param name='site_root' value='' />
+        <param name='name' value='CarbonEmissionaspredicatedbyofDataCenters&#47;Sheet12' />
+        <param name='tabs' value='no' /><param name='toolbar' value='yes' />
+        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CarbonEmissionaspredicatedbyofDataCenters&#47;Sheet12&#47;1.png' /> 
+        <param name='animate_transition' value='yes' />
+        <param name='display_static_image' value='yes' />
+        <param name='display_spinner' value='yes' />
+        <param name='display_overlay' value='yes' />
+        <param name='display_count' value='yes' />
+        <param name='language' value='en' />
+        </object>
+        </div>                
+        <script type='text/javascript'>                    
+        var divElement = document.getElementById('viz1622415936290');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];                    
+        if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height='927px';} 
+        else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height='927px';} 
+        else { vizElement.style.width='100%';vizElement.style.height='2127px';}                     
+        var scriptElement = document.createElement('script');                    
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+        </script>
+       
+    </br>
+    </br>
+    </br>
+        <p> 
+
+        </br>   In our pursuit of explaining the relationship between data use and environmental impact our group decided to investigate the statistical relationship between the number of data centers in a country with their net carbon emissions per year. Using a regression model with data collected can provide valuable information regarding which countries have high levels of carbon output and high amounts of data centers (and therefore data consumption) with those who have high amounts of carbon output and relatively low amounts of data centers. </br>
+    
+        </br>   The data collected comes from the Data Center Journals, Data Centers and Cloud Scene websites. The initial SLR model indicates a positive correlation with a low p-value indicating a high level of significance. R-Squared is within an acceptable range for an experiment of this type and standard error is quite high which is also expected given the nature of the data set. Residuals in R indicated a linear model is acceptable as there is no clear pattern. Despite this we should be wary as the data is so highly right skewed. The two outliers are China and The United States which makes sense given the context of this issue. </br>
+        </br> 
+
+        <center><img src="pictures/carbongraphr.png" width = "600" height = "350"></center>
+
+        </br>   These countries are the two largest polluters in terms of Carbon emissions and both rank within the top four in terms of data centers which makes them obvious candidates to skew the data and be significant outliers. Doing so lowered the R-Squared value leading me to believe that they are influential outliers but in the way that I expected. An important trend to note is that many of the countries below the regression line (meaning they pollute less than expected based on data centers/data use) are historically imperialist countries who continue to benefit from the exploitation of the global south. As nations begin to bridge the divide in terms of internet access and concentration of data centers this issue of carbon emissions related to data use will only continue to worsen. While this statistical experience did not give me the results I most wanted, they do serve to show the massive inequalities in terms of which countries consume, produce and use data at the highest rates.  </br>
+
+        </br>   Simply removing the top 20 countries by total GDP lowered the correlation by 0.5 and the R-Squared by 0.35.</br>
+
+    </br>
+    </br>
+    </br>
+         </p>
+        </div>
+
+
+
+</body>

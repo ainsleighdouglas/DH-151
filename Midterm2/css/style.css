@@ -4,6 +4,8 @@ body,html {
 	width:100%;
 	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
 	font-size: 100%;
+  overflow: auto;
+	scroll-behavior: smooth;
 }
 
 #map {
@@ -15,6 +17,7 @@ body {
 	display: grid;
 	grid-template-rows: 80px 1fr 40px;
 	grid-template-columns: 20% 80%;
+  background-color: hsl(229, 225, 214);
 	grid-template-areas: 
 	"header header"
 	"sidebar content"
@@ -24,10 +27,23 @@ body {
 .header {
 	grid-area: header;
 	padding:25px;
-    background-color:#466d50;
-	color: white;
+  background-color: hsl(201, 195, 180);
+	color: rgb(255, 255, 255);
 	font-size: 1.3em;
 }
+
+.navbar {
+	height: 88px;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+  color: hsl(355, 80%, 50%);
+	text-decoration: underline;
+	font-weight: 900;
+}
+
 
 
 .about {
@@ -38,14 +54,15 @@ body {
 
 .content {
 	grid-area: content;
-    width: 75%;
+  width: 75%;
+  background-color: hsl(229, 225, 214);
  
 }
 
 .footer {
 	grid-area: footer;
 	padding:10px;
-	background-color:#466d50;
+	background-color: hsl(229, 225, 214);
 	color: white;
 }
   
@@ -174,3 +191,4 @@ button {
     from {opacity: 0;}
     to {opacity:1 ;}
   }
+  
