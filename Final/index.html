@@ -20,7 +20,7 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-
+<!--Style for Dynamic CO2 clock-->
   <style type="text/css">
 
 
@@ -88,10 +88,9 @@ body {font-family: Arial, Helvetica, sans-serif;}
 </head>
 
 <body>
-  <h2>Modal Example</h2>
 
-<!-- Trigger/Open The Modal -->
-<div class="button" onclick="myFunction()"></div><button id="myBtn"><div id="main"></div></button>
+<!-- Trigger/Open The Modal-->
+<div class="button" onclick="myFunction()"></div><button id="myBtn"><div id="main"></div></button> 
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -132,22 +131,11 @@ window.onclick = function(event) {
 }
 </script>
 
-
-<!-- Clock Widget -->
-<script>
-// When the user clicks on <div>, open the popup
-function myFunction() {
-  var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
-</script>
-
-
 <!-- Navigation -->
+<!-- Dynamic wdiget in left corner -->
 <header class="header">
 	<nav class="navbar navbar-expand navbar-light">
-     <div class="popup" onclick="myFunction()"></div><div id="main"></div>
-      <span id="myPopup" data-new-gr-c-s-check-loaded="14.1012.0" data-gr-ext-installed="">
+     <div class="button" onclick="myFunction()"></div><div id="main"></div>
           <!--<center><div id="main">GOOGLE.COM EMITTED<strong> 87294.03 </strong> KG OF CO2 SINCE YOU OPENED THIS PAGE</div><center>-->
           <div id="main2" ></div>
           
@@ -159,6 +147,7 @@ function myFunction() {
           var co2 = 0.0108171;
           
           setInterval(function(){ 
+            // what is actually printed in top left corner
               document.getElementById("main").innerHTML = ""+ ''+'<strong> '+ c.toFixed(2) +'</strong> '+'';
               console.log(c);
               c = c + visitsSec * co2;
@@ -166,16 +155,10 @@ function myFunction() {
           }, 1000);
               
           </script>
-          
-          </span>
         </div>
  
 
-    <!--Responsive menu button-->
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    
+    <!--Right side of nav bar-->
     <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
