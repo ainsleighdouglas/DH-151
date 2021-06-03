@@ -2,23 +2,25 @@
 <html>
 <head>
 	<title>Visualizations</title>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png">
 
-	<!-- style sheets -->
-	<link rel="stylesheet" href="css/style.css">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
-
-	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-	<script src="js/papaparse.min.js"></script>
-    
-    <!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    
+    <!-- style sheets -->
+      <link rel="stylesheet" href="css/style.css">
+  
+      <!-- leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+  
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  
+      <script src="js/papaparse.min.js"></script>
+  
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  
+  
     <style>
  /*    
     .column {
@@ -61,22 +63,37 @@
 
 <body>
 
-	<div class="header">
-        <div class="tile_div">
-            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
-            <div class="row issue">
-            <div class="title col-md-7"></div>
-             <div class="buttons btn-group col-md-5">
-                    <button onclick="" > Research </button>
-                    <button onclick="document.location='https://ryanorlando.github.io/Dh151/Midterm/index.html'" >Map</button>
-                    <button onclick="" >Visualizations</button>
-                    <button onclick="" >Conclusion</button>
-                    <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Midterm2/index.html'" >Home</button>
-             </div>
-             </div>
-            <div class="clear"></div>
-        </div>
-	</div>
+	<!-- Navigation -->
+<header class="header">
+	<nav class="navbar navbar-expand navbar-light">
+    <a class="navbar-brand" href="index.html" ></a>
+     Home
+    </a> 
+
+    <!--Responsive menu button-->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+
+    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <button onclick="" > Research </button>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.location='https://ryanorlando.github.io/Dh151/Midterm/index.html'" >Map</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="" >Visualizations</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="" >About</button>
+        </li>
+      </ul>
+    </div>
+</nav>
+</header>
+
 
 
 </br>
@@ -86,11 +103,11 @@
     </br>
     </br>
         <p> 
-            <h3 style= "text-align:center; color:#1f5706; font-size: 40px">Analysis of Data Centers and Carbon Emissions:</h3>
+            <h3 style= "text-align:center; color:#3d3800; font-size: 40px">Analysis of Data Centers and Carbon Emissions:</h3>
         </p>
     </br>
 
-    <div class='tableauPlaceholder' id='viz1622415936290' style='position: relative'>
+    <div class='tableauPlaceholder' id='viz1622415936290' style='position: relative;'>
         <noscript><a href='#'><img alt='Carbon Emissions as predicted by # of Data Centers' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CarbonEmissionaspredicatedbyofDataCenters&#47;Sheet12&#47;1_rss.png' style='border: none' /></a>
         </noscript>
         <object class='tableauViz'  style='display:none;'>
@@ -122,15 +139,15 @@
     </br>
     </br>
     </br>
-        <p> 
+        <p style= "margin-left: 100px; margin-right: 100px; color:#3d3800;"> 
 
         </br>   In our pursuit of explaining the relationship between data use and environmental impact our group decided to investigate the statistical relationship between the number of data centers in a country with their net carbon emissions per year. Using a regression model with data collected can provide valuable information regarding which countries have high levels of carbon output and high amounts of data centers (and therefore data consumption) with those who have high amounts of carbon output and relatively low amounts of data centers. </br>
     
         </br>   The data collected comes from the Data Center Journals, Data Centers and Cloud Scene websites. The initial SLR model indicates a positive correlation with a low p-value indicating a high level of significance. R-Squared is within an acceptable range for an experiment of this type and standard error is quite high which is also expected given the nature of the data set. Residuals in R indicated a linear model is acceptable as there is no clear pattern. Despite this we should be wary as the data is so highly right skewed. The two outliers are China and The United States which makes sense given the context of this issue. </br>
         </br> 
-
+        </p>
         <center><img src="pictures/carbongraphr.png" width = "600" height = "350"></center>
-
+        <p style= "margin-left: 100px; margin-right: 100px; color:#3d3800;"> 
         </br>   These countries are the two largest polluters in terms of Carbon emissions and both rank within the top four in terms of data centers which makes them obvious candidates to skew the data and be significant outliers. Doing so lowered the R-Squared value leading me to believe that they are influential outliers but in the way that I expected. An important trend to note is that many of the countries below the regression line (meaning they pollute less than expected based on data centers/data use) are historically imperialist countries who continue to benefit from the exploitation of the global south. As nations begin to bridge the divide in terms of internet access and concentration of data centers this issue of carbon emissions related to data use will only continue to worsen. While this statistical experience did not give me the results I most wanted, they do serve to show the massive inequalities in terms of which countries consume, produce and use data at the highest rates.  </br>
 
         </br>   Simply removing the top 20 countries by total GDP lowered the correlation by 0.5 and the R-Squared by 0.35.</br>
@@ -140,7 +157,11 @@
     </br>
          </p>
         </div>
-
+        <div class="footer">
+            Source: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
+            </div>
+            
+            <script src="js/map.js"></script>
 
 
 </body>
