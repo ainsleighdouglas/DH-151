@@ -1,0 +1,192 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+	font-size: 100%;
+    overflow: auto;
+	scroll-behavior: smooth;
+}
+
+#map {
+	height: 100%;
+    width: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 80px 1fr 40px;
+	grid-template-columns: 0% 100%;
+    background-color: rgb(229, 225, 214);
+	grid-template-areas: 
+	"header header"
+	"sidebar content"
+	"footer footer";
+}
+
+.header {
+	grid-area: header;
+	padding-top: 0px;
+    background-color: rgb(201, 195, 180);
+	color: rgb(255, 255, 255);
+	font-size: 1.3em;
+}
+
+.navbar {
+	height: 88px;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: hsl(355, 80%, 50%);
+	text-decoration: underline;
+	font-weight: 900;
+}
+
+
+
+.about {
+	grid-area: about;
+ 
+}
+
+
+.content {
+  grid-area: content;
+  width: 100%;
+  background-color: rgb(229, 225, 214);
+ 
+}
+
+.footer {
+	grid-area: footer;
+	padding:10px;
+	background-color: #aa4c00;
+	color: white;
+}
+  
+
+button {
+        background-color:#687a5f; 
+        opacity: .7;
+        /* text-align: right; */
+        border: none;
+        color: white;
+        padding: 0px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        position: relative;
+    
+    margin: 0px;
+    cursor: pointer; 
+    border-radius: 8px;
+    text-align: center;
+    }
+    
+    button:hover {
+        background:#3d3800;;
+        ;
+        opacity: .7;
+    }
+
+
+
+
+
+    .column {
+        float: left;
+        width: 33.33%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      } 
+
+
+    .tile_div a {
+        display: block;
+        float: left;
+        height: 50px;
+        width: 100px;
+        margin-right: 5px;
+        background-image: url(./images/button_left.png);
+        text-align: center;
+        line-height: 50px;
+        text-decoration: none;
+    }
+    
+    .title_div a.last {
+        margin-right: 0;
+    }
+    
+    .clear {
+        clear: both;
+    }
+
+
+
+    .right{
+        display:flex;
+        justify-content: flex-end;
+        }
+
+
+        /* Popup container */
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  /* The actual popup (appears on top) */
+  .popup .popuptext {
+    visibility: hidden;
+    width: 160px;
+    background-color: #555;
+    color: rgb(255, 0, 0);
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+  }
+  
+  /* Popup arrow */
+  .popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  /* Toggle this class when clicking on the popup container (hide and show the popup) */
+  .popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+  }
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  
