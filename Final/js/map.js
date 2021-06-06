@@ -3,8 +3,10 @@ let map;
 let lat = 0;
 let lon = 0;
 let zl = 3;
-let path = "data/carbonEmissionsDH.csv";
-let markers = L.featureGroup();
+let path = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS_PlPERpLYVzWdq_FLrMAzv7ZANCa1qvC0egyBeB5EBR2te24SmY2EqZSl-WwSFxuhw0p-KNl7lJwG/pub?output=csv";
+// let markers = L.featureGroup();
+let comarkers = L.featureGroup();
+let datamarkers = L.featureGroup();
 
 // initialize
 $( document ).ready(function() {
@@ -16,29 +18,10 @@ $( document ).ready(function() {
 function createMap(lat,lon,zl){
 	map = L.map('map').setView([lat,lon], zl);
 
-	var Thunderforest_MobileAtlas = L.tileLayer('https://{s}.tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?apikey={apikey}', {
-	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-	apikey: '<your apikey>',
-	maxZoom: 22
-   });
-
-   L.tileLayer.provider('Thunderforest.MobileAtlas').addTo(map);
-
-/*
-	var OpenStreetMap_HOT = L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-        maxZoom: 19,
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-	}).addTo(map);
-
-
-	L.tileLayer.provider('Stamen.Watercolor').addTo(map);
-
 	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 	}).addTo(map);
-	*/
 }
-
 
 // function to read csv data
 function readCSV(path){
@@ -57,37 +40,69 @@ function readCSV(path){
 function mapCSV(data){
 	
 	// circle options
-	let circleOptions = {
+	let circleCarbon = {
 		radius: 15,
 		weight: 1,
-		color: 'white',
-		fillColor: 'green',
-		fillOpacity: .5,
+		color: "white",
+		fillColor: null,
+		fillOpacity: 0.009,
 	}
 
-	// loop through each entry
-	data.data.forEach(function(item,index){
+		let circleData = {
+			radius: 15,
+			weight: 1,
+			color: "white",
+			fillColor: null,
+			fillOpacity: 0.005,
+		}
 
-        circleOptions.radius = item.latest_value * 20
+data.data.forEach(function(item,index){
+	
+	
+	for (i = 0; i < 109; i++){
+	
+		circleCarbon.radius = item.Quantity * .166
+		circleCarbon.fillColor= "green"
 
-		let marker = L.circleMarker([item.latitude,item.longitude],circleOptions)
-		.on('mouseover',function(){
-			this.bindPopup(`<h3>${item.geoAreaName}</h3>${item.latest_value}`).openPopup()
+		let comarker = L.circleMarker([item.lat,item.lon], circleCarbon)
+		.on('mouseover',function(index){
+			this.bindPopup(`<h3>${item.Location}</h3>${item.Quantity} Data Centers`)
 		})
+		comarkers.addLayer(comarker)
+		//$('.sidebar').append(`<img src="https://images.emojiterra.com/twitter/v13.0/512px/1f5fa.png"  onmouseover="zoomToImage(${index})"> ${item.Location}<br>`)
+	}
+	for (i = 0; i < 143; i++){
+		circleData.radius = item.latest_value * 20
+		circleData.fillColor= "blue"
+		
+		let datamarker = L.circleMarker([item.latitude,item.longitude], circleData)
+		.on('mouseover',function(){
+			this.bindPopup(`<h3>${item.geoAreaName}</h3>${item.latest_value} KG of CO2 emitted per dollar of GDP`).openPopup()
+		})
+		datamarkers.addLayer(datamarker)
 
-		// add marker to featuregroup
-		markers.addLayer(marker)
+	}
 
-		// add entry to sidebar
-		$('.sidebar').append(`<img src="https://images.emojiterra.com/twitter/v13.0/512px/1f5fa.png"  onclick="panToImage(${index})"> ${item.geoAreaName}<br>`)
-	})
+// add featuregroup of markers to map
+	datamarkers.addTo(map)
+	comarkers.addTo(map)
 
-	markers.addTo(map); // add featuregroup to map
+})
 
-	map.fitBounds(markers.getBounds()); // fit markers to map
+let addedlayers = {
+	"CO2 Output": datamarkers,
+	"Data Center Quantity": comarkers,
 }
 
-function panToImage(index){
-	map.setZoom(17);
-	map.panTo(markers.getLayers()[index]._latlng);
+
+// add layer control box. "null" is for basemap. layers, i.e., is defined above
+L.control.layers(null,addedlayers).addTo(map);
+
+// fit markers to map so that the map goes to the fitted markers
+map.fitBounds(comarkers.getBounds())
+}
+
+function zoomToImage(index){
+	map.setZoom(10);
+	map.panTo(comarkers.getLayers()[index]._latlng);
 }

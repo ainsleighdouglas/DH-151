@@ -1,0 +1,141 @@
+body,html {
+	margin:0;
+	height:100%;
+	width:100%;
+	font-family: "DejaVu Sans", "Bitstream Vera Sans", "Segoe UI", "Lucida Grande", Verdana, Tahoma, Arial, sans-serif;
+	font-size: 100%;
+    overflow: auto;
+	scroll-behavior: smooth;
+}
+
+#map {
+	height: 100%;
+}
+
+body {
+	display: grid;
+	grid-template-rows: 80px 1fr 40px;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: 
+	"sidebar content"
+	"footer footer";
+}
+
+.navbar {
+	height: 88px;
+	font-size: 18px;
+	line-height: 28px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link{
+    color: hsl(355, 80%, 50%);
+	text-decoration: underline;
+	font-weight: 900;
+}
+
+.about {
+	grid-area: about;
+ }
+
+.content {
+  grid-area: content;
+  width: 50%;
+  margin: 50px;
+ 
+}
+
+
+.footer {
+	grid-area: footer;
+	padding:10px;
+    margin-top: 50px;
+    height: 45%;
+    background-color:rgb(255, 253, 234, .3);
+    text-align: right;
+}
+  
+
+button {
+        background-color:#687a5f; 
+        opacity: .7;
+        /* text-align: right; */
+        border: none;
+        color: white;
+        padding: 0px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        position: relative;
+    
+    border-radius: 8px;
+    margin: 0px;
+    cursor: pointer; 
+    border-radius: 8px;
+    text-align: center;
+    }
+    
+    button:hover {
+        border-radius: 8px;
+        color: #3d3800;
+        background:rgb(229, 225, 214);
+        ;
+        opacity: .7;
+    }
+
+
+
+
+
+    .column {
+        float: left;
+        width: 33.33%;
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      } 
+
+
+    .tile_div a {
+        display: block;
+        float: left;
+        height: 50px;
+        width: 100px;
+        margin-right: 5px;
+        background-image: url(./images/button_left.png);
+        text-align: center;
+        line-height: 50px;
+        text-decoration: none;
+    }
+    
+    .title_div a.last {
+        margin-right: 0;
+    }
+    
+    .clear {
+        clear: both;
+    }
+
+
+
+    .right{
+        display:flex;
+        justify-content: flex-end;
+        }
+  
+  
+  /* Add animation (fade in the popup) */
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+  }
+  

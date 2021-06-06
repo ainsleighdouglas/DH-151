@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>World Choropleth</title>
+	<meta charset="utf-8" />
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png">
+​
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/barmap.css">
+
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+   	<!-- classy brew -->
+	<script src="js/classybrew.js"></script>
+
+	<!-- apex charts -->
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+	<!-- js-grid -->
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+	<link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    ​
+
+</head>
+<body style="background-color:#eeebe3;">
+
+	<!-- Navigation -->
+<header class="header">
+	<nav class="navbar navbar-expand navbar-light">
+    <a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >Home</a>
+     
+    </a> 
+
+    <!--Responsive menu button-->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    
+    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151//Final/visual.html'" > Research </button>
+        </li>
+        <li class="nav-item">
+          <button onclick="" >Map</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.location='https://ryanorlando.github.io/Dh151/FinalMap/index.html'">Visualizations</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
+        </li>
+      </ul>
+    </div>
+</nav>
+</header>
+
+	<div class="content">
+		<div id="map"></div>
+	</div>
+
+	<div class="dashboard">
+        
+    </div>
+
+    <div class="sidebar">
+        </br>
+        </br>
+        </br>
+        </br>
+		<h2>About</h2>
+        <p style="color:rgb(124, 124, 124)">This choropleth map illustrates the prevalence of carbon emissions across the world, as compared to units of GDP. 
+            Data for all countries was not available, but this map gives a good indication of countries that over-emit based on their 
+            economic production. We then compared each country's emissions level to the global average from this dataset, to give an idea 
+            of how much more or less countries are emitting compared to what their "fair share" would be. </p>
+		</br>
+        <h2>Interaction</h2>
+        <p style="color:rgb(124, 124, 124)">
+        - hover over countries on the map
+        </br>
+        - look at the bars
+        </p>
+	</div>
+
+    <div class="footer">
+        Source: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
+    </div>
+
+	<script src="js/barmap.js"></script>
+
+</body>
+</html>

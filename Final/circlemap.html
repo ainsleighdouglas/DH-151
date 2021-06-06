@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The Weight of Data</title>
+    <meta charset="utf-8" />
+	<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png">
+​
+	<!-- style sheets -->
+	<link rel="stylesheet" href="css/style.css">
+​
+	<!-- leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+​
+	<!-- jquery -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+​
+	<script src="js/papaparse.min.js"></script>
+​
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+​
+</head>
+<body>
+
+	<!-- Navigation -->
+<header class="header">
+	<nav class="navbar navbar-expand navbar-light">
+    <a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >Home</a>
+     
+    </a> 
+
+    <!--Responsive menu button-->
+    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button> -->
+    
+    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151//Final/visual.html'" > Research </button>
+        </li>
+        <li class="nav-item">
+          <button onclick="" >Map</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.location='https://ryanorlando.github.io/Dh151/FinalMap/index.html'">Visualizations</button>
+        </li>
+        <li class="nav-item">
+          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
+        </li>
+      </ul>
+    </div>
+</nav>
+</header>
+
+	<!--<div class="sidebar">
+	</br>
+	</br>
+		<center> <img src = "https://images.emojiterra.com/twitter/v13.0/512px/1f5fa.png" style = "width: 25%;"></center>
+
+		<h2 style = "color:white">About</h2>
+        <p style = "color:white"> This data illustrates the presence of data centers across the world, as well as carbon emissions measured in kilograms per unit of GDP. 
+			Although many people do not often see an association between these two concepts, in fact data centers play a big role in carbon emissions. 
+			Data centers require a large amount of energy to power processing and server maintenance, so that internet users can stay connected at high speeds. 
+			In this project, our goal is to highlight this issue that many people know nothing about. In this map, explore the presence of data centers around the world, 
+			while also examining the countries that emit the most carbon dioxide in comparison to their GDP.
+		</p> 
+
+		<p style = "color:white"> There are several points to be made about this map and the goals associated with it. Our primary goal in this project is to promote an understanding of 
+			this issue. Therefore, this map is not our primary vessel for showing a causal relationship. Instead, we lean more heavily on our research 
+			to demonstrate the severity of the issue. This map is instead a visual aid to provide a demonstration of the global repercussions of carbon dioxide 
+			emissions and the growth of global technology. 
+		</p>
+		
+        <h2 style = "color:white">Interact!</h2>
+		<p style = "color:white"> To interact hover your mouse over any blue or green circle on the map. To interact with the layers click the layers icon in the top right corner to select either "C02 Emissions" or "Quantity of Data Centers".
+		</p> 
+
+		<p> </p>
+	</div>
+
+	<div class="footer">
+		Sources: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub , <a href="https://www.datacenters.com/locations?page=65&per_page=40&query=&withProducts=false&showHidden=false&nearby=false&radius=0&bounds=&circleBounds=&polygonPath=">datacenters.com</a>
+	</div>-->
+
+    <div class="content">
+		<div id="map"></div>
+	</div>
+
+	<script src="js/map.js"></script>
+
+</body>
+</html>

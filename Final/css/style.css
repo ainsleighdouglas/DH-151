@@ -10,7 +10,6 @@ body,html {
 
 #map {
 	height: 100%;
-    width: 100%;
 }
 
 body {
@@ -21,6 +20,7 @@ body {
 	grid-template-areas: 
 	"header header"
 	"sidebar content"
+  "dashboard dashboard"
 	"footer footer";
 }
 
@@ -36,21 +36,19 @@ body {
 	height: 88px;
 	font-size: 18px;
 	line-height: 28px;
+  border-radius: 8px;
 }
 
 .navbar-light .navbar-nav .active>.nav-link{
     color: hsl(355, 80%, 50%);
 	text-decoration: underline;
 	font-weight: 900;
+  border-radius: 8px;
 }
-
-
 
 .about {
 	grid-area: about;
- 
-}
-
+ }
 
 .content {
   grid-area: content;
@@ -135,49 +133,7 @@ button {
         display:flex;
         justify-content: flex-end;
         }
-
-
-        /* Popup container */
-.popup {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-  }
   
-  /* The actual popup (appears on top) */
-  .popup .popuptext {
-    visibility: hidden;
-    width: 160px;
-    background-color: #555;
-    color: rgb(255, 0, 0);
-    text-align: center;
-    border-radius: 6px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -80px;
-  }
-  
-  /* Popup arrow */
-  .popup .popuptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  
-  /* Toggle this class when clicking on the popup container (hide and show the popup) */
-  .popup .show {
-    visibility: visible;
-    -webkit-animation: fadeIn 1s;
-    animation: fadeIn 1s
-  }
   
   /* Add animation (fade in the popup) */
   @-webkit-keyframes fadeIn {
