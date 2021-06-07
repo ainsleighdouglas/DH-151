@@ -2,134 +2,133 @@
 <html>
 <head>
 	<title>About Team Data</title>    
-	<meta charset="utf-8" />
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png">
+      <meta charset="utf-8" />
+      <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png">
 
-  <!-- style sheets -->
-	<link rel="stylesheet" href="css/style.css">
+      <!-- style sheets -->
+      <link rel="stylesheet" href="css/style.css">
 
-	<!-- leaflet -->
-	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-	<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+      <!-- leaflet -->
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+      <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 
-	<!-- jquery -->
-	<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+      <!-- jquery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
-	<script src="js/papaparse.min.js"></script>
+      <script src="js/papaparse.min.js"></script>
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
     <style>
-    /* Set additional styling options for the columns */
-    .column {
-    float: left;
-    }
+        /* Set additional styling options for the columns */
+        .column {
+        float: left;
+        }
 
-    /* Set width length for the left, right and middle columns */
-    .left {
-    text-align: center;
-    width: 31%;
-    padding: 0px 20px;
-    margin: 3px;
-    border-radius: 8px;
-    }
+        /* Set width length for the left, right and middle columns */
+        .left {
+        text-align: center;
+        width: 31%;
+        padding: 0px 20px;
+        margin: 3px;
+        border-radius: 8px;
+        }
 
-    .middle {
-    text-align: center;
-    width: 31%;
-    padding: 0px 20px;
-    margin: 3px;
-    border-radius: 8px;
-    }
-    
-    .right {
-    text-align: center;
-    width: 31%;
-    padding: 0px 20px;
-    margin: 3px;
-    border-radius: 8px;
-    }
-
-
+        .middle {
+        text-align: center;
+        width: 31%;
+        padding: 0px 20px;
+        margin: 3px;
+        border-radius: 8px;
+        }
+        
+        .right {
+        text-align: center;
+        width: 31%;
+        padding: 0px 20px;
+        margin: 3px;
+        border-radius: 8px;
+        }
     </style>
 
-
-
-
-
 </head>
+
+
 
 <body style="background-color: #232700;">
 
 <!-- Navigation -->
-<header class="header" style="background-color: #eeebe3; opacity: .6;">
-	<nav class="navbar navbar-expand navbar-light">
-    <a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >
-      <img src="pictures/teamData.png" style ="width:12%; margin-left: 10px;"/> 
-    </a> 
+  <!-- icon/homebutton -->
+    <header class="header" style="background-color: #eeebe3; opacity: .6;">
+      <nav class="navbar navbar-expand navbar-light">
+        <a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >
+          <img src="pictures/teamData.png" style ="width:12%; margin-left: 10px;"/> 
+        </a> 
 
-    <!--Responsive menu button-->
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    
-    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-            <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/visual.html'" > Research </button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/circlemap.html'" >Map</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/barmap.html'">Visualizations</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
-        </li>
-      </ul>
-    </div>
-</nav>
-</header>
+  <!-- nav bar right -->   
+        <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/visual.html'" > Research </button>
+            </li>
+            <li class="nav-item">
+              <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/circlemap.html'" >Map</button>
+            </li>
+            <li class="nav-item">
+              <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/barmap.html'">Visualizations</button>
+            </li>
+            <li class="nav-item">
+              <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    </header>
 
-  
+<!-- Content -->
 	<div class="content" style="background-color:#232700;">
 
     </br>
     </br>
     </br>
- <h1 style= "text-align:center; color:#eeebe3;">Meet the Team</h1>
-    <div class="row" style= "margin-left: 60px;">
-        <div class="column left" style="background-color:rgba(61,56,0,.4)">
-            <br/>
-            <a href = "https://github.com/sebdills"></a><img src="pictures/seb.png" width = "200" height = "150">
-            <h2 style= "text-align:center; color:rgba(255, 255, 255, 1)">Sebastien</h2>
-            <p style="color:#eeebe3; font-size: 13pt;">Position -  Data Analytics and Historical Background</p><p style="color:white; margin: 20px">Will work in data analytics and help provide a historical background</p>
-            <br/>
+    <!-- TITLE -->
+    <h1 style= "text-align:center; color:#eeebe3;">Meet the Team</h1>
+
+        <!-- 3 columns (about section)-->
+        <div class="row" style= "margin-left: 60px;">
+            <div class="column left" style="background-color:rgba(68, 63, 5, 0.4)">
+                <br/>
+                <a href = "https://github.com/sebdills"></a><img src="pictures/seb.png" width = "200" height = "150">
+                <h2 style= "text-align:center; color:rgba(255, 255, 255, 1)">Sebastien</h2>
+                <p style="color:#eeebe3; font-size: 13pt;">Position -  Data Analytics and Historical Background</p><p style="color:white; margin: 20px">Will work in data analytics and help provide a historical background</p>
+                <br/>
+            </div>
+            <div class="column middle"style="background-color:rgba(68, 63, 5, 0.4)">
+                <br/>
+                <a href = "https://github.com/ryanorlando"></a><img src="pictures/ryan.png" width = "200" height = "150">
+                <h2 style= "text-align:center; color:rgba(255, 255, 255, 1)" >Ryan</h2>
+                <p style="color:#eeebe3; font-size: 13pt;">Position - Content Creator</p><p style="color:white; margin: 20px">Will primarily aid with narrative development and data analysis. </p>
+          
+                <br/>
+            </div>
+            <div class="column middle" style="background-color:rgba(68, 63, 5, 0.4)">
+                <br/>
+                <a href = "https://github.com/ainsleighdouglas"><img src="pictures/ansl.png" width = "200" height = "150" ></a>
+                <h2 style= "text-align:center; color:rgba(255, 255, 255, 1)" >Ainsleigh</h2>
+                <p style="color:#eeebe3; font-size: 13pt;">Position - Designer</p><p style="color:white; margin: 20px">Will focus on the design and visual aesthetic of the map and data visualization outputs. </p>
+        
+                <br/>
+            </div>
         </div>
-        <div class="column middle" style="background-color:rgba(61,56,0,.4)">
-            <br/>
-            <a href = "https://github.com/ryanorlando"></a><img src="pictures/ryan.png" width = "200" height = "150">
-            <h2 style= "text-align:center; color:rgba(255, 255, 255, 1)" >Ryan</h2>
-            <p style="color:#eeebe3; font-size: 13pt;">Position - Content Creator</p><p style="color:white; margin: 20px">Will primarily aid with narrative development and data analysis. </p>
-       
-            <br/>
-        </div>
-        <div class="column middle" style="background-color:rgba(61,56,0,.4)">
-            <br/>
-            <a href = "https://github.com/ainsleighdouglas"><img src="pictures/ansl.png" width = "200" height = "150" ></a>
-            <h2 style= "text-align:center; color:rgba(255, 255, 255, 1)" >Ainsleigh</h2>
-            <p style="color:#eeebe3; font-size: 13pt;">Position - Designer</p><p style="color:white; margin: 20px">Will focus on the design and visual aesthetic of the map and data visualization outputs. </p>
-     
-            <br/>
-        </div>
-    </div>
+
+    <!--a bout text section -->    
     <br/>
-    <p style="padding: 250px; padding-top: 50px; padding-bottom: 10px; color:#c7c7c7;;"> 
-      In this project, we want to investigate the environmental impact of technology, particularly the internet and web-hosting services. Internet access and usage requires an enormous amount of energy, and there are now over 2000 data centers around the world. These data centers are a significant source of carbon emissions, and have a large impact on the total carbon footprint of the world. Our goal is to investigate where these data centers are and compare those locations to areas with high carbon emissions, with the goal of determining if internet usage is one of the leading causes of carbon dioxide pollution. This research will potentially push the world to develop new, more efficient ways to host internet access as the climate change crisis continues to worsen. The connection is studied and scientifically proven, but we want to provide a clear way to intuitively show the effects of this issue. There is a lack of clear data on this availble on the internet so we think our site can provide real value. With such a large scope and issues that are remarkably complex, we are aware that we will be unable to truly capture the full breadth of this issue, or even definitively prove a true relationship between the two variables. As such, our primary goal is to provide a strong resource for education and awareness growth.
-  </p> 
+      <p style="padding: 250px; padding-top: 50px; padding-bottom: 10px; color:#c7c7c7;;"> 
+        In this project, we want to investigate the environmental impact of technology, particularly the internet and web-hosting services. Internet access and usage requires an enormous amount of energy, and there are now over 2000 data centers around the world. These data centers are a significant source of carbon emissions, and have a large impact on the total carbon footprint of the world. Our goal is to investigate where these data centers are and compare those locations to areas with high carbon emissions, with the goal of determining if internet usage is one of the leading causes of carbon dioxide pollution. This research will potentially push the world to develop new, more efficient ways to host internet access as the climate change crisis continues to worsen. The connection is studied and scientifically proven, but we want to provide a clear way to intuitively show the effects of this issue. There is a lack of clear data on this availble on the internet so we think our site can provide real value. With such a large scope and issues that are remarkably complex, we are aware that we will be unable to truly capture the full breadth of this issue, or even definitively prove a true relationship between the two variables. As such, our primary goal is to provide a strong resource for education and awareness growth.
+        <a style="color:#a9af6d" href="https://docs.google.com/spreadsheets/d/11vJ_tugtbBu9cVjJfiTw7eLxZDFIL_qws9gR8WGFoHE/edit?usp=sharing"><h4 style="padding-left: 250px;">outside resources</h4></a>
+      </p> 
     <br/>
     <br/>
     <br/>
@@ -138,14 +137,10 @@
 
 	</div>
 
-
-
+<!--footer-->
 	<div class="footer" style="background-color: #232700;">
-		For more click here: <a href="https://github.com/ryanorlando/DH151-Project">Git Hub</a>
+		For more click here: <a style="color:#a9af6d" href="https://github.com/ryanorlando/DH151-Project">Git Hub</a>
 	</div>
-
-	<!--<script src="js/map.js"></script>-->
-
 
 </body>
 </html>

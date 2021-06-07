@@ -21,89 +21,56 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 ​
 </head>
+
+
 <body style="background-color: rgb(229, 225, 214);">
 
-	<!-- Navigation -->
-<header class="header">
-	<nav class="navbar navbar-expand navbar-light">
-		<a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >
-			<img src="pictures/teamData.png" style ="width:12%; margin-left: 10px;"/> 
-		  </a> 
+<!-- Navigation -->
+  <!-- icon/homebutton -->
+	<header class="header">
+		<nav class="navbar navbar-expand navbar-light">
+			<a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >
+				<img src="pictures/teamData.png" style ="width:12%; margin-left: 10px;"/> 
+			</a> 
 
-    <!--Responsive menu button-->
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-    
-    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-            <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/visual.html'" > Research </button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/circlemap.html'" >Map</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/barmap.html'">Visualizations</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
-        </li>
-      </ul>
-    </div>
-</nav>
-</header>
-
-	<!--<div class="sidebar">
-	</br>
-	</br>
-		<center> <img src = "https://images.emojiterra.com/twitter/v13.0/512px/1f5fa.png" style = "width: 25%;"></center>
-
-		<h2 style = "color:white">About</h2>
-        <p style = "color:white"> This data illustrates the presence of data centers across the world, as well as carbon emissions measured in kilograms per unit of GDP. 
-			Although many people do not often see an association between these two concepts, in fact data centers play a big role in carbon emissions. 
-			Data centers require a large amount of energy to power processing and server maintenance, so that internet users can stay connected at high speeds. 
-			In this project, our goal is to highlight this issue that many people know nothing about. In this map, explore the presence of data centers around the world, 
-			while also examining the countries that emit the most carbon dioxide in comparison to their GDP.
-		</p> 
-
-		<p style = "color:white"> There are several points to be made about this map and the goals associated with it. Our primary goal in this project is to promote an understanding of 
-			this issue. Therefore, this map is not our primary vessel for showing a causal relationship. Instead, we lean more heavily on our research 
-			to demonstrate the severity of the issue. This map is instead a visual aid to provide a demonstration of the global repercussions of carbon dioxide 
-			emissions and the growth of global technology. 
-		</p>
-		
-        <h2 style = "color:white">Interact!</h2>
-		<p style = "color:white"> To interact hover your mouse over any blue or green circle on the map. To interact with the layers click the layers icon in the top right corner to select either "C02 Emissions" or "Quantity of Data Centers".
-		</p> 
-
-		<p> </p>
-	</div>
-
-	<div class="footer">
-		Sources: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub , <a href="https://www.datacenters.com/locations?page=65&per_page=40&query=&withProducts=false&showHidden=false&nearby=false&radius=0&bounds=&circleBounds=&polygonPath=">datacenters.com</a>
-	</div>-->
-
+  <!-- nav bar right -->
+		<div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+				<button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/visual.html'" > Research </button>
+			</li>
+			<li class="nav-item">
+			<button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/circlemap.html'" >Map</button>
+			</li>
+			<li class="nav-item">
+			<button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/barmap.html'">Visualizations</button>
+			</li>
+			<li class="nav-item">
+			<button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
+			</li>
+		</ul>
+		</div>
+	</nav>
+	</header>
+	
+<!-- Content -->
     <div class="content">
 		<div id="map"></div>
 	</div>
 
-	<p style= "padding: 60px; padding-left: 300px;  padding-right: 300px;margin-bottom: -60px; color: #3d3800 ">
-	In this map, we compare the presence of data centers to carbon emissions around the world. Larger circles indicate a greater presence of data centers or higher emissions. In comparing this data, we can see that there is a slight correlation between data center quantities and emissions in a country. Countries with a large amount of data centers (namely the US and China) also emit large amounts. This is clearly not the only factor contributing to emissions, as illustrated by rising emissions in areas with fewer data centers, mainly in Africa. This was an expected finding, but the more important aspect of this representation is the revelation that a select few countries and regions are the hosts of the majority of data centers. This calls a number of questions about responsibility. Do we ask wealthier, industrialized countries to contribute more than others to emissions reduction, especially when it is less developed regions that bear the brunt of climate change challenges? Or do we continue as we are, knowing that more than half the world’s population now uses the internet? There are many implications of this data, and a great deal of important decisions to be made about what it means for our world. While we do not have the answers to these questions, we encourage you to think about how you see this issue being resolved most fairly, because it will only get worse with time.
-	</p>	
-	</br>
-	</br>
+		<p style= "padding: 60px; padding-left: 300px;  padding-right: 300px;margin-bottom: -60px; color: #3d3800 ">
+			In this map, we compare the presence of data centers to carbon emissions around the world. Larger circles indicate a greater presence of data centers or higher emissions. In comparing this data, we can see that there is a slight correlation between data center quantities and emissions in a country. Countries with a large amount of data centers (namely the US and China) also emit large amounts. This is clearly not the only factor contributing to emissions, as illustrated by rising emissions in areas with fewer data centers, mainly in Africa. This was an expected finding, but the more important aspect of this representation is the revelation that a select few countries and regions are the hosts of the majority of data centers. This calls a number of questions about responsibility. Do we ask wealthier, industrialized countries to contribute more than others to emissions reduction, especially when it is less developed regions that bear the brunt of climate change challenges? Or do we continue as we are, knowing that more than half the world’s population now uses the internet? There are many implications of this data, and a great deal of important decisions to be made about what it means for our world. While we do not have the answers to these questions, we encourage you to think about how you see this issue being resolved most fairly, because it will only get worse with time.
+			Source: <a style="color:#a9af6d" href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
+		</p>	
+		</br>
+		</br>
 
 	<p style= "padding: 60px; margin-bottom: 170px;">
+		
 		</p>	
 		</br>
 		</br>
 		
-
-
-	
-
-	
 
 	<script src="js/map.js"></script>
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Visualizations</title>
+	<title>Research</title>
     <meta charset="utf-8" />
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/6/6d/Windows_Settings_app_icon.png">
 
@@ -19,94 +19,54 @@
   
       <!-- Bootstrap CSS -->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  
-  
-    <style>
- /*    
-    .column {
-    float: left;
-    }
-
-     
-    .left {
-    text-align: center;
-    width: 31%;
-    padding: 0px 20px;
-    margin: 3px;
-    border-radius: 8px;
-    }
-
-    .middle {
-    text-align: center;
-    width: 31%;
-    padding: 0px 20px;
-    margin: 3px;
-    border-radius: 8px;
-    }
-    
-    .right {
-    text-align: center;
-    width: 31%;
-    padding: 0px 20px;
-    margin: 3px;
-    border-radius: 8px;
-    }
-*/
-
-    </style>
-
-
-
-
 
 </head>
 
+
+
 <body style="background-color: rgb(229, 225, 214);">
 
-	<!-- Navigation -->
-<header class="header">
-	<nav class="navbar navbar-expand navbar-light">
-    <a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >
-      <img src="pictures/teamData.png" style ="width:12%; margin-left: 10px;"/> 
-    </a> 
-
-    <!--Responsive menu button-->
-    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button> -->
-
-    <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
-            <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/visual.html'" > Research </button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/circlemap.html'" >Map</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/barmap.html'">Visualizations</button>
-        </li>
-        <li class="nav-item">
-          <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
-        </li>
-      </ul>
-    </div>
-</nav>
-</header>
-
-
+<!-- Navigation -->
+  <!-- icon/homebutton -->
+    <header class="header">
+      <nav class="navbar navbar-expand navbar-light">
+        <a class="navbar-brand" href="https://ainsleighdouglas.github.io/DH-151/Final/index.html" >
+          <img src="pictures/teamData.png" style ="width:12%; margin-left: 10px;"/> 
+        </a> 
+        
+  <!-- nav bar right -->
+        <div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/visual.html'" > Research </button>
+            </li>
+            <li class="nav-item">
+              <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/circlemap.html'" >Map</button>
+            </li>
+            <li class="nav-item">
+              <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/barmap.html'">Visualizations</button>
+            </li>
+            <li class="nav-item">
+              <button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
+            </li>
+          </ul>
+        </div>
+    </nav>
+    </header>
 
 </br>
 </br>
-    <html>
+
+<!-- Title -->
     <div class="content">
-    </br>
-    </br>
-        <p> 
-            <h3 style= "text-align:center; color:#3d3800; font-size: 40px">Analysis of Data Centers and Carbon Emissions:</h3>
-        </p>
-    </br>
-
+      <p> 
+        </br>
+        </br>
+        <h3 style= "text-align:center; color:#3d3800; font-size: 40px">Analysis of Data Centers and Carbon Emissions:</h3>
+        </br>
+       </p>
+  
+<!-- Graph -->
     <div class='tableauPlaceholder' id='viz1622415936290' style='position: relative;'>
         <noscript><a href='#'><img alt='Carbon Emissions as predicted by # of Data Centers' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ca&#47;CarbonEmissionaspredicatedbyofDataCenters&#47;Sheet12&#47;1_rss.png' style='border: none' /></a>
         </noscript>
@@ -140,42 +100,41 @@
     </br>
     </br>
 
-    <!-- Content -->
+<!-- Research Text -->
 	<div class="content">
 		<div class="rowa" style="margin-top: 20px; margin-left: 100px; margin-right: 100px;">
 		<!-- column 1 -->
 			<div class="columna"> 
-        <p style= "margin-left: 100px; margin-right: 100px; color:#3d3800;"> 
 
-        </br>  In our pursuit of explaining the relationship between data use and environmental impact, our group decided to investigate the statistical relationship between the number of data centers in a country with their net carbon emissions per year. Using a regression model with data collected can provide valuable information regarding which countries have high levels of carbon output and high amounts of data centers (and therefore data consumption) with those who have high amounts of carbon output and relatively low amounts of data centers.
-        </br> 
-        </br>   The data collected comes from the Data Center Journals, Data Centers and Cloud Scene websites. The initial SLR model indicates a positive correlation with a low p-value indicating a high level of significance. R-Squared is within an acceptable range for an experiment of this type and standard error is quite high which is also expected given the nature of the data set. Residuals in R indicated a linear model is acceptable as there is no clear pattern. Despite this we should be wary as the data is so highly right skewed. The two outliers are China and The United States, which makes sense given the context of this issue.
-        </br> 
+        <p style= "margin-left: 28px; margin-right: 100px; color:#3d3800;"> 
+        </br>  In our pursuit of explaining the relationship between data use and environmental impact, our group decided to investigate the statistical relationship between the number of data centers in a country with their net carbon emissions per year. Using a regression model with data collected can provide valuable information regarding which countries have high levels of carbon output and high amounts of data centers (and therefore data consumption) with those who have high amounts of carbon output and relatively low amounts of data centers.</br> 
+        </br>   The data collected comes from the Data Center Journals, Data Centers, and Cloud Scene websites. The initial SLR model indicates a positive correlation with a low p-value indicating a high level of significance. R-Squared is within an acceptable range for an experiment of this type and standard error is quite high which is also expected given the nature of the data set. The correlation coefficient is 25.43 which is a strong positive relationship. Residuals in R indicated a linear model is acceptable as there is no clear pattern. Despite this, we should be wary as the data is so highly right-skewed. We can conclude from this that there is a correlation between data centers, internet use and carbon emission. We should be mindful that these results are limited due to the overwhelming complexity of this issue. What we can rightly conclude however is that the correlation is in fact there, and we should pay special attention to outlier data points. </br> 
         </p>
+
 			</div>
 
 		<!-- column 2 -->
 			<div class="columna" style="padding-right: 150px; margin-top: 10px;">		​
         <center><img src="pictures/carbongraphr.png" width = "650" height = "400"></center>
 		  </div>
-    </br>
-    </br>
-    </br>
+      </br>
+      </br>
+      </br>
   </div>
-
-        <p style= "margin-left: 200px; margin-right: 150px; color:#3d3800;">
-          These countries are the two largest polluters in terms of Carbon emissions and both rank within the top four in terms of data centers, which makes them obvious candidates to skew the data and be significant outliers. Doing so lowered the R-Squared value leading us to believe that they are influential outliers but in the way that we expected. An important trend to note is that many of the countries below the regression line (meaning they pollute less than expected based on data centers/data use) are historically imperialist countries who continue to benefit from the exploitation of the global south. As nations begin to bridge the divide in terms of internet access and concentration of data centers this issue of carbon emissions related to data use will only continue to worsen. While this statistical experience did not give us the results we expected, they do serve to show the massive inequalities in terms of which countries consume, produce and use data at the highest rates.
-          </br>
+   <!-- full spread text -->
+        <p style= "margin-left: 125px; margin-right: 150px; color:#3d3800;">
+          The two largest outliers are China and The United States. This makes sense given the context of this issue. These countries are the two largest polluters in terms of Carbon emissions and both rank within the top four in terms of data centers. These reasons make them obvious candidates to skew the data and be significant outliers. Removing these countries lowered the R-Squared value leading me to believe that they are significant outliers, but not in the way that I expected. The R-Squared value fell following this change. Many of the countries below the regression line (meaning they pollute less than expected based on data centers) are historically imperialist countries that continue to benefit from the exploitation of the global south. Those above the line are composed of more Middle Eastern and South American countries. As nations begin to bridge the divide in terms of internet access and concentration of data centers, the issue of carbon emissions will continue to worsen. While this statistical test did not give us the results we expected, they do serve to show the massive inequalities in terms of which countries consume, produce and use data at the highest rates. This also shows us where the trend is likely heading. As more and more countries gain internet users and data centers the correlation will likely only increase. To prevent this change, governments and corporations need to invest in sustainable infrastructure and cooling systems for their data centers. Billions more people will use the internet in the next decade. Smart investments now can stop this trend. </br>
         </br>
           In this project, our goal was to highlight the connection between data centers and carbon emissions. Although public data does not provide the best illustration of this relationship, we wanted to give a well-rounded presentation of a topic that is not publicly addressed often. Climate change is the most pressing issue facing our world today and going forward, and every small step we can take in lowering our emissions counts. At the very least, we hope that this project compels the user to consider their impact on the environment every day and take action to protect our world.
         </p>
 
-  
-        <div class="footer">
-            Source: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
-            </div>
+<!-- Footer -->
+  <div class="footer">
+          Sources: click <a style="color:#a9af6d" href="https://docs.google.com/spreadsheets/d/11vJ_tugtbBu9cVjJfiTw7eLxZDFIL_qws9gR8WGFoHE/edit#gid=0">here</a>
+   </div>
             
-            <script src="js/map.js"></script>
+           
+  <script src="js/map.js"></script>
 
 
 </body>
