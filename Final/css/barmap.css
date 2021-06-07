@@ -30,7 +30,7 @@ body,html {
     border-radius: 8px;
       width: 98.5%;
       height: 100%;
-      margin-top: -240px;
+      margin-top: -25%;
       margin-left: 10px;
       margin-right: 10px;
 
@@ -40,7 +40,7 @@ body,html {
   .header {
 	grid-area: header;
 	padding-top: 0px;
-    background-color:#eeebe3;
+  background-color:#eeebe3;
 	color: rgb(255, 255, 255);
 	font-size: 1.3em;
 }
@@ -98,9 +98,9 @@ body,html {
   
   .footer {
 	grid-area: footer;
-    margin-top: 50px;
+    margin-top: 70px;
 	padding:10px;
-	background-color:#eeebe3;
+	background-color:#eeebe300;
 	color: white;
 }
 

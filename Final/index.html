@@ -89,25 +89,24 @@
 	</style>
 </head>
 ​
-<body>
-​
-	<!-- Trigger/Open The Modal-->
-	<!-- <div class="button" onclick="myFunction()"></div> -->
-	
-  <!-- The Modal -->
-  <div id="myModal" class="modal">
-
-    <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <p>Some text in the Modal..</p>
-  </div>
-​
-</div>
+<body style="background-color: rgb(229, 225, 214);">
 ​
 	<!-- Navigation -->
 	<!-- Dynamic wdiget in left corner -->
-	<header class="header">
+	<header class="header">		​
+	<!-- Trigger/Open The Modal-->
+	<!-- <div class="button" onclick="myFunction()"></div> -->
+	
+		<!-- The Modal -->
+		<div id="myModal" class="modal">
+
+			<!-- Modal content -->
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p>Some text in the Modal..</p>
+		</div>
+​
+</div>
 		<nav class="navbar navbar-expand navbar-light">
 ​
 			<!-- 
@@ -117,7 +116,7 @@
 					https://getbootstrap.com/docs/5.0/components/buttons/
 					
 			-->
-			<button type="button" class="btn btn-warning" id="myBtn"><div id="main"></div></button> 
+			<button type="button" class="btn btn-warning" id="myBtn" style="background-color: #3131317a; color:#fefefe; font-size: 20px; margin-top: -20px;"><div id="main"></div></button> 
 ​
 			<script>
 				var c = 0;
@@ -128,7 +127,7 @@
 				
 				setInterval(function(){ 
 					// what is actually printed in top left corner
-						document.getElementById("main").innerHTML = ""+ ''+'<strong> '+ c.toFixed(2) +'</strong> '+'';
+						document.getElementById("main").innerHTML = "Google emitted"+ ''+'<strong> '+ c.toFixed(2) +'</strong> '+ "KG of CO2";
 						console.log(c);
 						c = c + visitsSec * co2;
 						
@@ -141,16 +140,16 @@
 			<div class="collapse navbar-collapse" id="navbarNav" style="padding-top:10px;">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-							<button style="border-radius: 8px; margin: 2px;" onclick="document.location='https://ainsleighdouglas.github.io/DH-151//Final/visual.html'" > Research </button>
+							<button onclick="document.location='https://ainsleighdouglas.github.io/DH-151//Final/visual.html'" > Research </button>
 					</li>
 					<li class="nav-item">
-						<button style="border-radius: 8px; margin: 2px;" onclick="" >Map</button>
+						<button onclick="" >Map</button>
 					</li>
 					<li class="nav-item">
-						<button style="border-radius: 8px; margin: 2px;" onclick="document.location='https://ryanorlando.github.io/Dh151/FinalMap/index.html'">Visualizations</button>
+						<button onclick="document.location='https://ryanorlando.github.io/Dh151/FinalMap/index.html'">Visualizations</button>
 					</li>
 					<li class="nav-item">
-						<button style="border-radius: 8px; margin: 2px;" onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
+						<button onclick="document.location='https://ainsleighdouglas.github.io/DH-151/Final/about.html'" >About</button>
 					</li>
 				</ul>
 			</div>
@@ -206,32 +205,50 @@
 ​
 	<!-- Content -->
 	<div class="content">
+		<div class="rowa" style="margin-top: 85px;">
+		<!-- column 1 -->
+			<div class="columna"> <img src="pictures/logo-TD.png" style ="width:95%; margin-left: 100px;"/> 
+
+			<p style = "font-size: 17px; padding-top: 10px; text-align: left; color:#3d3800; margin-left: 120px; margin-right: 80px"> 
+					All internet activity is made possible through web hosting in data centers. Data centers are physical buildings that house the servers that host internet activity. Every time you use the internet, these servers power that activity. As you can imagine, it takes an immense amount of power to operate these servers safely and effectively to host the massive amount of internet activity that takes place every minute. Indeed, recent estimates hypothesize that data centers account for more than 3% of global electricity consumption and 2% of the world’s carbon emissions. 
+			</p>
+				</br>
+
+			<center><p style = "font-size: 28px; padding-top: 10px; text-align: left; color:#3d3800; margin-left: 180px; margin-right: 160px; margin-bottom: 40px;"><i><b>
+				"In the US, data centres are responsible for 2% of the country’s electricity use"
+			</b></i></p></center>
+
+			<p style = "font-size: 17px; padding-top: 10px; text-align: left; color:#3d3800; margin-left: 120px; margin-right: 80px"> 
+				This puts data centers on par with the airline industry in terms of their environmental impact (<a href="https://www.computerworld.com/article/3431148/why-data-centres-are- the-new-frontier-in-the-fight-against-climate-change.html">www.computerworld.com</a>). However, there is still one big difference: our usage of the internet has grown exponentially, and will almost certainly continue to do so. We have only scratched the surface of what is possible with the computer power we can generate, and we can be sure that innovation will not stop. This leaves us a huge challenge that comes in two parts. First, we have to educate people on the true impact of the internet. We cannot live without it, but we have to be sure that we are aware of what living with it means for our future. Second, we have to develop mitigation techniques and eventually find suitable alternatives or innovations. This project aims to tackle the first of these issues. We cannot devise and implement a true solution to such a global issue without massive collective action efforts, but we can do our best to show that there is an issue that needs to be addressed. So we encourage you to read on, interact and engage with our maps and charts, and hopefully take a closer look at your own internet activity and impact. 
+			</p>
+			</div>
+
+		<!-- column 2 -->
+			<div class="columna" style="padding-right: 150px; margin-top: 100px;">	<h1 style= "text-align:center; color:#3d3800; font-size: 50px;">Introduction</h1>
+				​
+					<p style = "font-size: 19px; padding-top: 0px; text-align: left; color:#3d3800; line-height: 33px;"> 
+						In today’s world, so many people in modernized countries are conscious of the impact they have on the environment. Airline travel, industrial factories, traffic, light pollution, and a wide variety of other human-made factors contribute to global carbon dioxide emissions and global warming. These factors are well-documented, and awareness of environmental issues is at a historic high, However, there is one impactful area that many people are less aware of: the internet. Public consensus has always seen the internet as a viable alternative to using paper books, notes, and records, but the benefit of the internet may not be as clear as it is assumed to be. 
+					</p>
+				</br>
+			    </br>
+				</br>
+				</br>
+					<center> <img src="https://media.datacenterdynamics.com/media/images/ovhcloud_sdis_3.2e16d0ba.fill-1200x630.jpg" style ="width:90%;"/></center>
+						</br>		
+						</br>
+						</br>		
+					<center> <img src="https://www.cisco.com/c/dam/assets/swa/img/630/av01248-630x420.jpg" style ="width:90%;"/></center>		
+				 </div>
+		  </div>
 ​
 	</br>
 	</br>
-			<center> <img src="https://media.datacenterdynamics.com/media/images/ovhcloud_sdis_3.2e16d0ba.fill-1200x630.jpg" style ="width:75%;height: 75%"/></center>
-​
 	</br>
-	</br>
-	</br>
-	<h1 style= "text-align:center; color:#3d3800; font-size: 50px">Introduction</h1>
-​
-	<p style = "font-size: 20px; padding: 300px; padding-top: 10px; text-align: center; color:#3d3800;"> 
-					This project will be about the weight of data and internet usage in the modern era, with an emphasis on the environmental impact of these practices. 
-					Our group (called Team Data) will be investigating this issue with the goal of determining its severity and investigating potential solutions. Due to 
-					the large scope of our research and the great number of confounding variables contributing to global warming, we recognize that this project will 
-					represent more of an educational resource than an attempt to prove a relationship. Data center emissions are not the main cause of carbon emissions, 
-					but they are an unexpected source, and through our research, we hope to shed more light on this issue. In this spirit, we will aim to highlight current 
-					research on this topic, provide visual and textual information, and bring the user's attention to new ways of thinking about the impact of their online 
-					activity. 
-	</p> 
 ​
 	</div>
 	<div class="footer">
 	Source: <a href="https://hub.arcgis.com/datasets/undesa::indicator-9-4-1-carbon-dioxide-emissions-per-unit-of-gdp-kilogrammes-of-co2-per-constant-2010-united-states-dollars-5/data?geometry=147.710%2C-39.570%2C-79.750%2C62.146">ArcGIS Hub</a>
 	</div>
-​
-	<script src="js/map.js"></script>
 ​
 </body>
 ​
