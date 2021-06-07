@@ -1,4 +1,5 @@
 // Global variables
+let info_panel = L.control();
 let map;
 let lat = 0;
 let lon = 0;
@@ -87,6 +88,9 @@ data.data.forEach(function(item,index){
 	datamarkers.addTo(map)
 	comarkers.addTo(map)
 
+		// create the infopanel
+		createInfoPanel();
+
 })
 
 let addedlayers = {
@@ -94,6 +98,30 @@ let addedlayers = {
 	"Data Center Quantity": comarkers,
 }
 
+//info panel
+function createInfoPanel(){
+
+	info_panel.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info'); // create a div with a class "info"
+		this.update();
+		return this._div;
+	};
+
+	// method that we will use to update the control based on feature properties passed
+	info_panel.update = function (properties) {
+		// if feature is highlighted
+		if(properties){
+			this._div.innerHTML = `<b>${properties.geoAreaName}</b><br>${fieldtomap}: ${properties[fieldtomap]}`;
+		}
+		// if feature is not highlighted
+		else
+		{
+			this._div.innerHTML = 'Interact by hovering over circles and by clicking' + '</br> '+'the layers icon to toggle between the two data sets.';
+		}
+	};
+
+	info_panel.addTo(map);
+}
 
 // add layer control box. "null" is for basemap. layers, i.e., is defined above
 L.control.layers(null,addedlayers).addTo(map);

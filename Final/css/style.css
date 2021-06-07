@@ -60,10 +60,10 @@ body {
 .footer {
 	grid-area: footer;
 	padding:30px;
-  background-color: #ccc;
+  background-color: rgb(229, 225, 214);
 	color: white;
 }
-  
+
 
 button {
         background-color:#687a5f; 
@@ -158,3 +158,19 @@ button {
     to {opacity:1 ;}
   }
   
+
+  .info {
+    padding: 6px 8px;
+    font: 14px/16px Arial, Helvetica, sans-serif;
+    background: white;
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    min-width: 250px;
+    min-height: 50px;
+    position: topleft;
+  }
+  .info h4 {
+    margin: 0 0 5px;
+    color: rgb(172, 172, 172);
+  }
